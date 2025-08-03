@@ -14,19 +14,21 @@
       display:flex;
       flex-direction:column;
       align-items:center;
-      justify-content: center;
+      justify-content: flex-start;
       padding:1rem;
     }
+
     .card {
       flex: 0 0 auto;
-      margin-top:40px;
+      margin: 40px auto;
       width:100%;
-      max-width:420px;
+      max-width:none;
       background:#1f2435;
       border-radius:14px;
       padding:1rem;
       box-shadow:0 30px 60px -10px rgba(0,0,0,0.5);
     }
+
     h1 {
       margin:0 0 4px;
       font-size:1.8rem;
@@ -42,7 +44,6 @@
       gap:12px;
     }
 
-    /* image-only link cards */
     .link-card {
       position: relative;
       overflow: hidden;
@@ -50,7 +51,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 180px;
+      height: 380px;
       background: #1f2435;
       text-decoration: none;
       transition: transform .2s;
@@ -73,17 +74,16 @@
       color:#777e9f;
     }
 
-    /* mobile tweaks */
-    @media (max-width:600px) {
-      .card {
-        max-width:100%;
-        margin:0;
-      }
+    @media (max-width: 800px) {
       body {
         padding:0.5rem;
       }
+      .card {
+        max-width:100%;
+        margin: 20px auto;
+      }
       .link-card {
-        height: 340px;
+        height: 420px;
       }
     }
   </style>
