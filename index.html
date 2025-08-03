@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Russ Rent Links</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body {
+      margin:0;
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;
+      background:#0f111a;
+      color:#f0f4f9;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:1rem;
+    }
+    .card {
+      width:100%;
+      max-width:420px;
+      background:#1f2435;
+      border-radius:14px;
+      padding:1rem;
+      box-shadow:0 30px 60px -10px rgba(0,0,0,0.5);
+    }
+    h1 {
+      margin:0 0 4px;
+      font-size:1.8rem;
+      letter-spacing:0.5px;
+    }
+    p.subtitle {
+      margin:0 0 16px;
+      font-size:0.95rem;
+      color:#a0a8c0;
+    }
+    .links {
+      display:grid;
+      gap:12px;
+    }
+    .link-card {
+      position:relative;
+      display:block;
+      overflow:hidden;
+      border-radius:10px;
+      text-decoration:none;
+      color:inherit;
+      background:#2a2f55;
+      transition:transform .2s;
+    }
+    .link-card:hover {
+      transform:translateY(-2px);
+    }
+    .link-card img {
+      display:block;
+      width:100%;
+      object-fit:cover;
+      aspect-ratio:4/1;
+    }
+    .label {
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      padding:12px 16px;
+      background:rgba(0,0,0,0.65);
+      font-weight:600;
+      font-size:1rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:8px;
+    }
+    .label .text {
+      flex:1;
+    }
+    .footer {
+      margin-top:1rem;
+      font-size:0.65rem;
+      text-align:center;
+      color:#777e9f;
+    }
+    @media (max-width:500px){
+      .link-card img { aspect-ratio:3/1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" aria-label="Link hub">
+    <div class="header">
+      <h1>Russ Rent</h1>
+      <p class="subtitle">Quick access to rentals, storage, and questions.</p>
+    </div>
+
+    <div class="links">
+      <!-- Link 1 -->
+      <a class="link-card" href="https://www.facebook.com/yourpage1" target="_blank" rel="noopener">
+        <img src="https://via.placeholder.com/800x200?text=Apartments+%2F+Houses" alt="Apartments/Houses">
+        <div class="label">
+          <div class="text">Apartments/Houses</div>
+          <div>→</div>
+        </div>
+      </a>
+
+      <!-- Link 2 -->
+      <a class="link-card" href="https://www.facebook.com/yourpage2" target="_blank" rel="noopener">
+        <img src="https://via.placeholder.com/800x200?text=Adventure+RV" alt="Adventure RV">
+        <div class="label">
+          <div class="text">Adventure RV</div>
+          <div>→</div>
+        </div>
+      </a>
+
+      <!-- Link 3 -->
+      <a class="link-card" href="https://www.facebook.com/yourpage3" target="_blank" rel="noopener">
+        <img src="https://via.placeholder.com/800x200?text=CenterValley+Storage" alt="CenterValley Storage">
+        <div class="label">
+          <div class="text">CenterValley Storage</div>
+          <div>→</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="footer">
+      © <span id="year"></span> Russ Rent
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
