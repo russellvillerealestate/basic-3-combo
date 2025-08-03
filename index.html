@@ -38,50 +38,43 @@
       display:grid;
       gap:12px;
     }
+
+    /* updated card styling: show full image, remove cropping */
     .link-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 180px;
-  background: #1f2435;
-  text-decoration: none;
-  transition: transform .2s;
-}
-.link-card:hover {
-  transform: translateY(-2px);
-}
-
-.link-card img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.label {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 0.75rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.6rem;
-  background: rgba(0, 0, 0, 0.35);
-  border-radius: 0 0 14px 14px;
-}
-.label .text {
-      flex:1;
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 180px;
+      background: #1f2435;
+      text-decoration: none;
+      transition: transform .2s;
     }
+    .link-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .link-card img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
     .footer {
       margin-top:1rem;
       font-size:0.65rem;
       text-align:center;
       color:#777e9f;
+    }
+
+    /* mobile-friendly: slightly taller tap targets on narrow screens */
+    @media (max-width:500px){
+      .link-card {
+        height: 220px;
+      }
     }
   </style>
 </head>
@@ -94,31 +87,19 @@
     </div>
 
     <div class="links">
-      <!-- Link 1 -->
-      <a class="link-card" href="https://www.facebook.com/yourpage1" target="_blank" rel="noopener">
+      <!-- Link 1: Apartments/Houses -->
+      <a class="link-card" href="https://www.facebook.com/yourpage1" target="_blank" rel="noopener" aria-label="Apartments and houses">
         <img src="big%20house.jpg" alt="Apartments and houses" loading="lazy" />
-        <div class="label">
-          <div class="text">Apartments/Houses</div>
-          <div>→</div>
-        </div>
       </a>
 
-      <!-- Link 2 -->
-      <a class="link-card" href="https://www.facebook.com/yourpage2" target="_blank" rel="noopener">
+      <!-- Link 2: Adventure RV -->
+      <a class="link-card" href="https://www.facebook.com/yourpage2" target="_blank" rel="noopener" aria-label="Adventure RV">
         <img src="adventure%20rv%20logo.jpeg" alt="Adventure RV" loading="lazy" />
-        <div class="label">
-          <div class="text">Adventure RV</div>
-          <div>→</div>
-        </div>
       </a>
 
-      <!-- Link 3 -->
-      <a class="link-card" href="https://www.facebook.com/yourpage3" target="_blank" rel="noopener">
+      <!-- Link 3: CenterValley Storage -->
+      <a class="link-card" href="https://www.facebook.com/yourpage3" target="_blank" rel="noopener" aria-label="CenterValley Storage">
         <img src="centervalley%20storage%20logo.png" alt="CenterValley Storage" loading="lazy" />
-        <div class="label">
-          <div class="text">CenterValley Storage</div>
-          <div>→</div>
-        </div>
       </a>
     </div>
 
